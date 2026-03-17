@@ -1,0 +1,4 @@
+body{
+    --primary-color: #dfe3db;
+    background-color:var(--primary-color);
+}
