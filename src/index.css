@@ -1,4 +1,7 @@
-body{
+:root{
     --primary-color: #dfe3db;
+}
+
+body{
     background-color:var(--primary-color);
 }
