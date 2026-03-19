@@ -1,7 +1,60 @@
 :root{
-    --primary-color: #dfe3db;
+     
+    --bg-page: #E9E9E3;
+    --bg-card: #BCC2B4;
+    --bg-button: #162c17;
+    
+    /* fonts colors*/
+    --text-main: #162c17;
+    --text-soft: #182c1d;
+    --text-white: #FFFFFF;
+    
+    /* brand colors */
+    --brand-green-muted: #d3e8d3;
+    --brand-green-vibrant: #b3cdb4;
+    --brand-sand: #9B835F;
+
+    /*Utilies and state */
+    --action-hover: #575D47;
+    --white-pure: #FFFFFF;
+    
+    /* Font-wwight */
+    --fw-thin:       100;
+    --fw-extralight: 200;
+    --fw-light:      300;
+    --fw-regular:    400;
+    --fw-medium:     500;
+    --fw-semibold:   600;
+    --fw-bold:       700;
+    --fw-extrabold:  800;
+    --fw-black:      900;
 }
 
 body{
-    background-color:var(--primary-color);
+    background-color:var(--bg-page);
+}
+.main-header{
+    padding:1.5rem 3rem;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-soft);
+    font-weight:var(--fw-bold);
+
+    
+    & .navbar-links{
+        display: flex;
+        flex-direction: row; 
+        gap: 3rem; 
+    }
+    & .navbar-access{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem; 
+    }
 }
