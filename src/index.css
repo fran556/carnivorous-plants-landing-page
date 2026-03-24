@@ -18,7 +18,7 @@
     --action-hover: #575D47;
     --white-pure: #FFFFFF;
     
-    /* Font-wwight */
+    /* Font-wight */
     --fw-thin:       100;
     --fw-extralight: 200;
     --fw-light:      300;
@@ -28,13 +28,20 @@
     --fw-bold:       700;
     --fw-extrabold:  800;
     --fw-black:      900;
+
+    --pd-left-right: 3rem;
+    --pd-top-bottom: 1.5rem;
+    --pd-left: 3rem;
+    --pd-right: 3rem;
+    --pd-top: 1.5rem;
+    --pd-bottom: 1.5rem;
 }
 
 body{
     background-color:var(--bg-page);
 }
 .main-header{
-    padding:1.5rem 3rem;
+    padding:var(--pd-top-bottom) var(--pd-left-right);
 }
 
 .navbar {
@@ -51,10 +58,79 @@ body{
         display: flex;
         flex-direction: row; 
         gap: 3rem; 
+        font-size: 28px;
     }
     & .navbar-access{
         display: flex;
         flex-direction: row;
         gap: 1rem; 
+    }
+}
+
+.hero {
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    gap: .8rem;
+    /* align-items: center;
+    justify-content: space-between; */
+    padding: var(--pd-top) 0 var(--pd-bottom) var(--pd-left)  ;
+    
+    & .hero-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        padding: 0 0 var(--pd-bottom) 0;
+        
+        
+        & .hero-text-group {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            text-align: left;
+            color: var(--text-main);
+
+            
+
+            & .hero-headline {
+                font-size: 75px;
+            }
+            & .hero-body {
+                font-size: 28px;
+
+            }
+        }
+        & .cta-container{
+            /* background-color: #9B835F; */
+            width: 100%;
+            text-align: center;
+            & .hero-cta {
+                background-color: var(--bg-button);
+                color: var(--text-white);
+                border-radius: 999px;
+                padding: 11px 88px;
+                font-size: 24px;
+            }
+        }
+
+
+    }
+
+    & .hero-media {
+        background-color: var(--brand-green-vibrant);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 500px;
+        border-radius: 1090px 0px 0px 1090px;
+        & .hero-img {
+            width: fit-content;
+            height: fit-content;
+
+        }
     }
 }
