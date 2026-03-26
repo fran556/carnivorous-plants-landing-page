@@ -1,6 +1,6 @@
 :root{
      
-    --bg-page: #E9E9E3;
+    --bg-page: #f6f6f4;
     --bg-card: #BCC2B4;
     --bg-button: #162c17;
     
@@ -17,7 +17,10 @@
     /*Utilies and state */
     --action-hover: #575D47;
     --white-pure: #FFFFFF;
-    
+    /* Font-size */
+    --fs-body-sm: 14px;
+    --fs-body:    16px;
+    --fs-body-lg: 28px;   
     /* Font-wight */
     --fw-thin:       100;
     --fw-extralight: 200;
@@ -105,14 +108,15 @@ body{
         }
         & .cta-container{
             /* background-color: #9B835F; */
+            padding-right: 5.5rem;
             width: 100%;
             text-align: center;
             & .hero-cta {
                 background-color: var(--bg-button);
                 color: var(--text-white);
                 border-radius: 999px;
-                padding: 11px 88px;
-                font-size: 24px;
+                padding: 11px 80px;
+                font-size: 20px;
             }
         }
 
@@ -132,5 +136,32 @@ body{
             height: fit-content;
 
         }
+    }
+}
+
+.key-benefits {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    padding: calc(var(--pd-top) * 3) 0 calc(var(--pd-bottom) * 3) 0;
+
+    & .benefits {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+       & svg{
+         width: 50px;
+         height: 50px;
+       }
+
+       & .text-benefits {
+        font-size: var(--fs-body-lg);
+       }
     }
 }
