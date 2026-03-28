@@ -3,6 +3,7 @@
     --bg-page: #f6f6f4;
     --bg-card: #BCC2B4;
     --bg-button: #162c17;
+    --bg-white: #FFFFFF;
     
     /* fonts colors*/
     --text-main: #162c17;
@@ -225,5 +226,50 @@ body{
                 }
             }
         }
+    }
+}
+
+.quiz-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-main);
+    margin-top: 8rem;
+    
+    & .container-banner {
+        background-color: var(--bg-white);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        width: 900px;
+        padding:  var(--pd-top-bottom) 0;
+        border-radius: var(--radius-md);
+
+        & .headline-quiz {
+
+            font-size: calc(var(--fs-subtitle) * 2.3);
+        }
+        & .body-quiz {
+            
+            font-size: var(--fs-subtitle-lg);
+        }
+        
+        & a {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: .5rem;
+            font-size: var(--fs-subtitle-lg);
+
+            & svg {
+                width: 25px;
+                height: 25px;
+                color: var(--text-main);
+            }
+        }
+
     }
 }
