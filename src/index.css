@@ -217,6 +217,7 @@ body{
                     flex-direction: row;
                     color: var(--text-main);
                     gap: .5rem;
+                    text-decoration: underline;
                     
                     & svg {
                         color: var(--text-main);
