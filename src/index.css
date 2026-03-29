@@ -3,12 +3,14 @@
     --bg-page: #f6f6f4;
     --bg-card: #BCC2B4;
     --bg-button: #162c17;
+    --bg-like-button: #6a786a;
     --bg-white: #FFFFFF;
     
     /* fonts colors*/
     --text-main: #162c17;
     --text-soft: #182c1d;
     --text-white: #FFFFFF;
+    --text-muted: #6d6d6d;
     
     /* brand colors */
     --brand-green-muted: #d3e8d3;
@@ -18,6 +20,7 @@
     /*Utilies and state */
     --action-hover: #575D47;
     --white-pure: #FFFFFF;
+    --slide-muted: #b0b0ae;
     /* Font-size */
     --fs-body-sm: 14px;
     --fs-body:    16px;
@@ -57,6 +60,13 @@
 
 body{
     background-color:var(--bg-page);
+}
+
+.subtitle {
+     font-size: calc(var(--fs-subtitle-lg) * 2);
+     color:var(--text-main);
+     margin-bottom: 2rem ;
+
 }
 .main-header{
     padding:var(--pd-top-bottom) var(--pd-left-right);
@@ -132,6 +142,7 @@ body{
                 border-radius: 999px;
                 padding: 11px 80px;
                 font-size: 20px;
+                cursor: pointer;
             }
         }
 
@@ -186,18 +197,16 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    & .subtitle {
-        font-size: calc(var(--fs-subtitle-lg) * 2);
-        color:var(--text-main)
-
-    }
-
+    
+    
     & .container-card {
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
+        justify-content: center;
         gap: 1.5rem;
+        padding: 0 1rem;
+        width: 100%;
 
         & .card {
             display: flex;
@@ -205,6 +214,7 @@ body{
             gap: .5rem;
             justify-content: center;
             align-items: center;
+            cursor: pointer;
             & .img {
                 border-radius: var(--radius-lg);
                 box-shadow: var(--shadow-br);
@@ -271,5 +281,112 @@ body{
             }
         }
 
+    }
+}
+
+.bestsellers{
+    
+    text-align: center;
+    margin: 8rem 0;
+    padding:0 1rem;
+    
+    & .carousel {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 1.5rem;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        padding-bottom: 3rem;
+        
+        
+        & .carousel-item {
+            background-color: var(--bg-white);
+            padding: .5rem;
+            scroll-snap-align: start;
+            border-radius: var(--radius-md);
+            
+            & .card {
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+                height: auto;
+                width: 300px;
+                position: relative;
+                
+                & .card-img {
+                    width: 100%;
+                    border-radius: var(--radius-md);
+                }
+                & .like {
+                    background-color: var(--bg-like-button);
+                    position: absolute;
+                    top: 3px;
+                    left: 3px; 
+                    border-radius: var(--radius-full);
+                    border: none;
+                    cursor: pointer;
+                    padding: .5rem;
+
+                    & svg {
+                        color: var(--text-white);
+                    }
+                }
+
+                & .card-body{
+                    text-align: left;
+                    color: var(--text-main);
+                    & p {
+                        color: var(--text-muted);
+                    }
+                }
+                & .card-price {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    & .price {
+                        font-weight: var(--fw-bold);
+                        color: var(--text-main);
+                    }
+
+                    & .buy{
+                        background-color: var(--bg-button);
+                        color: var(--text-white);
+                        border-radius: var(--radius-full);
+                        padding: .1rem .2rem;
+                        border: none;
+                        cursor: pointer;
+                        & svg {
+                        color: var(--text-white);
+                        width: 20px;
+                        height: 20px;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        scroll-marker-group: after;
+    }
+    & .carousel::scroll-marker-group {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+    } 
+    & .carousel-item::scroll-marker {
+      width: 24px;
+      height: 4px;
+      background-color: var(--slide-muted);
+      border: none;
+      border-radius: var(--radius-full);
+      content: "";
+    }
+    & .carousel-item::scroll-marker:target-current {
+      background-color: var(--bg-button);
     }
 }
