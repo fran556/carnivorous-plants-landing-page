@@ -56,6 +56,23 @@
     --radius-xs:   2px;
     /* shadows */
     --shadow-br: 4px 4px 12px -3px rgba(0,0,0,0.89);
+    /* ── gap scale ── */
+     --gap-0:  0px;
+     --gap-1:  4px;
+     --gap-2:  8px;
+     --gap-3:  12px;
+     --gap-4:  16px;
+     --gap-5:  24px;
+     --gap-6:  32px;
+     --gap-7:  48px;
+     --gap-8:  64px;
+     /* ── gap semantic aliases ── */
+     --gap-xs:  var(--gap-1);  /*  4px */
+     --gap-sm:  var(--gap-2);  /*  8px */
+     --gap-md:  var(--gap-4);  /* 16px */
+     --gap-lg:  var(--gap-5);  /* 24px */
+     --gap-xl:  var(--gap-6);  /* 32px */
+     --gap-2xl: var(--gap-7);  /* 48px */
 }
 
 body{
@@ -425,5 +442,68 @@ body{
     & .review-author {
         text-align: right;
         padding-right: calc(var(--pd-right) / 2);
+    }
+}
+
+/*  Collections section */
+.collections {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--gap-md);
+    padding: 8rem var(--pd-left-right);
+    
+}
+.collection-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--brand-green-vibrant);
+    border-radius: var(--radius-md);
+    width: 600px;
+    height: 430px;
+}
+.collection-content {
+    display: flex;
+    gap: var(--gap-md);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 430px;
+
+    & .collection-title {
+        background-color: var(--bg-white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50%;
+        width: 100%;
+        margin: 0;
+        font-size: calc(var(--fs-subtitle-lg) * 2);;
+        border-radius: var(--radius-md);
+    }
+}
+.collection-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:center ;
+    background-color: var(--bg-button);
+    height: 50%;
+    width: 100%;
+    color: var(--text-white);
+    border-radius: var(--radius-md);
+    font-size: 1.5rem;
+    
+    & p {
+        padding: 0 1rem;
+        text-align: center;
+        font-weight: 50;
+    }
+    
+    & .collection-card-link {
+        text-decoration: underline;
+
     }
 }
