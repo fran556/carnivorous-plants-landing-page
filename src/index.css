@@ -504,6 +504,62 @@ body{
     
     & .collection-card-link {
         text-decoration: underline;
+        font-weight: var(--fw-bold);
 
+    }
+}
+/* offers */
+.offers {
+    background-color: var(--brand-green-muted);
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--pd-top-bottom) 0;
+
+    & p {
+        color: var(--text-main);
+    }
+}
+.offer-content {
+    background-color: var(--brand-green-vibrant);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--radius-md);
+    padding: 1rem 0;
+    color: var(--text-main);
+    
+    & img {
+        width: 150px;
+        height: 150px;
+    }
+    
+}
+.offer-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-right: 1rem;
+    height: 150px;
+    font-size: var(--fs-subtitle);
+
+}
+.form {
+    display: flex;
+    font-size: var(--fs-subtitle);
+    & input {
+        padding: 8px 10px;
+        width:250px ;
+        border-radius: var(--radius-md);
+        border: none;
+    }
+    & button {
+        background-color: var(--bg-button);
+        color: var(--text-white);
+        border-radius: var(--radius-md);
+        padding: 8px 18px ;
     }
 }
