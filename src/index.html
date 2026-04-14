@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/tokens.css">
     <link rel="stylesheet" href="./index.css">
 
     <title>Carnivorous-Plants</title>
@@ -14,7 +15,7 @@
     <header class="main-header">
         <nav class="navbar">
             <!-- <div class="container"> -->
-                <a href="/#"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-plant-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 9a10 10 0 1 0 20 0" /><path d="M12 19a10 10 0 0 1 10 -10" /><path d="M2 9a10 10 0 0 1 10 10" /><path d="M12 4a9.7 9.7 0 0 1 2.99 7.5" /><path d="M9.01 11.5a9.7 9.7 0 0 1 2.99 -7.5" /></svg></a>
+                <a href="/#"><svg class="logo" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-plant-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 9a10 10 0 1 0 20 0" /><path d="M12 19a10 10 0 0 1 10 -10" /><path d="M2 9a10 10 0 0 1 10 10" /><path d="M12 4a9.7 9.7 0 0 1 2.99 7.5" /><path d="M9.01 11.5a9.7 9.7 0 0 1 2.99 -7.5" /></svg></a>
                 <ul class="navbar-links">
                     <li><a href="/#">Home</a></li>
                     <li><a href="/#">Shop</a></li>
@@ -61,10 +62,6 @@
         <section class="main-categories">
             <h2 class="subtitle">Categories</h2>
             <div class="container-card">
-                <figure class="card">
-                    <img src="" alt="" class="img">
-                    <figcaption class="feet-info"></figcaption>
-                </figure>
                 <figure class="card">
                     <img src="./assets/images/download.jpg" alt="categorie indoor" class="img">
                     <figcaption class="feet-info">
@@ -113,8 +110,8 @@
         <section class="bestsellers">
             <h2 class="subtitle">Bestsellers</h2>
             <ul class="carousel">
-                <li class="carousel-item">
-                    <div class="card">
+                <!-- <article class="carousel-item"> -->
+                    <li class="card">
                         <img class="card-img" src="./assets/images/download.jpg" alt="Descripción">
                         <button class="like">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M4.087 6.477a4.565 4.565 0 0 1 6.456 0L12 7.934l1.457-1.457a4.565 4.565 0 0 1 6.456 6.457l-1.457 1.456l.013.013l-6.456 6.457l-.013-.013l-.013.013l-6.456-6.457l.013-.013l-1.457-1.456a4.565 4.565 0 0 1 0-6.457Z"/></svg>
@@ -129,62 +126,9 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 40 40"><path fill="currentColor" d="M24.73 28.146a.5.5 0 0 0 .36-.153l7.359-7.631a.5.5 0 0 0 0-.693l-7.391-7.662a.5.5 0 1 0-.72.693l7.056 7.315l-7.024 7.284a.5.5 0 0 0 .36.847"/><path fill="currentColor" d="M7.91 20.515h24.18a.5.5 0 0 0 0-1H7.91a.5.5 0 0 0 0 1"/></svg>
                             </button>
                         </div>
-                    </div>
-                </li>
-                <li class="carousel-item">
-                    <div class="card">
-                        <img class="card-img" src="./assets/images/download.jpg" alt="Descripción">
-                        <button class="like">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M4.087 6.477a4.565 4.565 0 0 1 6.456 0L12 7.934l1.457-1.457a4.565 4.565 0 0 1 6.456 6.457l-1.457 1.456l.013.013l-6.456 6.457l-.013-.013l-.013.013l-6.456-6.457l.013-.013l-1.457-1.456a4.565 4.565 0 0 1 0-6.457Z"/></svg>
-                        </button>
-                        <div class="card-body">
-                            <h3>Emerald Nest Fern</h3>
-                            <p>Thrives in indirect light, purifies air naturally.</p>
-                        </div>
-                        <div class="card-price">
-                            <span class="price">$759</span>
-                            <button class="buy">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 40 40"><path fill="currentColor" d="M24.73 28.146a.5.5 0 0 0 .36-.153l7.359-7.631a.5.5 0 0 0 0-.693l-7.391-7.662a.5.5 0 1 0-.72.693l7.056 7.315l-7.024 7.284a.5.5 0 0 0 .36.847"/><path fill="currentColor" d="M7.91 20.515h24.18a.5.5 0 0 0 0-1H7.91a.5.5 0 0 0 0 1"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </li>
-                <li class="carousel-item">
-                    <div class="card">
-                        <img class="card-img" src="./assets/images/download.jpg" alt="Descripción">
-                        <button class="like">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M4.087 6.477a4.565 4.565 0 0 1 6.456 0L12 7.934l1.457-1.457a4.565 4.565 0 0 1 6.456 6.457l-1.457 1.456l.013.013l-6.456 6.457l-.013-.013l-.013.013l-6.456-6.457l.013-.013l-1.457-1.456a4.565 4.565 0 0 1 0-6.457Z"/></svg>
-                        </button>
-                        <div class="card-body">
-                            <h3>Emerald Nest Fern</h3>
-                            <p>Thrives in indirect light, purifies air naturally.</p>
-                        </div>
-                        <div class="card-price">
-                            <span class="price">$759</span>
-                            <button class="buy">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 40 40"><path fill="currentColor" d="M24.73 28.146a.5.5 0 0 0 .36-.153l7.359-7.631a.5.5 0 0 0 0-.693l-7.391-7.662a.5.5 0 1 0-.72.693l7.056 7.315l-7.024 7.284a.5.5 0 0 0 .36.847"/><path fill="currentColor" d="M7.91 20.515h24.18a.5.5 0 0 0 0-1H7.91a.5.5 0 0 0 0 1"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </li>
-                <li class="carousel-item">
-                    <div class="card">
-                        <img class="card-img" src="./assets/images/download.jpg" alt="Descripción">
-                        <button class="like">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M4.087 6.477a4.565 4.565 0 0 1 6.456 0L12 7.934l1.457-1.457a4.565 4.565 0 0 1 6.456 6.457l-1.457 1.456l.013.013l-6.456 6.457l-.013-.013l-.013.013l-6.456-6.457l.013-.013l-1.457-1.456a4.565 4.565 0 0 1 0-6.457Z"/></svg>
-                        </button>
-                        <div class="card-body">
-                            <h3>Emerald Nest Fern</h3>
-                            <p>Thrives in indirect light, purifies air naturally.</p>
-                        </div>
-                        <div class="card-price">
-                            <span class="price">$759</span>
-                            <button class="buy">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 40 40"><path fill="currentColor" d="M24.73 28.146a.5.5 0 0 0 .36-.153l7.359-7.631a.5.5 0 0 0 0-.693l-7.391-7.662a.5.5 0 1 0-.72.693l7.056 7.315l-7.024 7.284a.5.5 0 0 0 .36.847"/><path fill="currentColor" d="M7.91 20.515h24.18a.5.5 0 0 0 0-1H7.91a.5.5 0 0 0 0 1"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </li>
+                    </li>
+                    
+                <!-- </article> -->
             </ul>
         </section>
         <section class=" reviews">
