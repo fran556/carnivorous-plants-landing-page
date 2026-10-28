@@ -81,7 +81,7 @@ body{
 
 .subtitle {
      font-size: calc(var(--fs-subtitle-lg) * 2);
-     color:var(--text-main);
+     color:var(--color-text-primary);
      margin-bottom: 2rem ;
 }
 
@@ -283,13 +283,13 @@ body{
     
 }
 .container-banner {
-    background-color: var(--bg-white);
+    background-color: var(--color-bg-surface);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    width: 900px;
+    max-width: 900px;
     padding:  var(--pd-top-bottom) 0;
     border-radius: var(--radius-md);
 
